@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<h1>This is a demonstration of jDog.test</h1>
+
+	<script src="jdog.js"></script>
+
+	<script>
+		// set by the server for localHost, staging, but not production
+		J.add("Properties.RunTestsOnStartup", true)
+	</script>
+
+	<script>
+
+		J.load(
+			"jQuery"
+			, "j.constructors.demoScript.js"
+			, "j.modules.demo2.js"
+			, "j.modules.demo3.js"
+			, true // rewrite
+			, true // non random name
+		)
+		.done(function() {
+
+			if (J.exists("Properties.RunTestsOnStartup"))
+				J.use("test.run")
+
+		})
+
+	</script>
+
+</body>
+</html>

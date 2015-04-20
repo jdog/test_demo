@@ -1,0 +1,7 @@
+:: Put the whole folder somewhere in your project, usually /Scripts
+
+take a look at the demo.html for a working example of adding and testing
+
+Open your browser console
+
+if the test does not load on the demo, make sure change the settings of J._.t (this should point to the jdogTest folder relative to the html)
